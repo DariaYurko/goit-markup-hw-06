@@ -242,6 +242,10 @@ body {
    position: absolute;
    top: 16px;
    right: 16px;
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
 }
 
 .mobile-menu-btn__icon {
@@ -303,8 +307,11 @@ body {
    color: #4d5ae5;
 }
 
-
+.mobile-menu .social-media {
+   column-gap: 40px;
+}
 /* ----------------- /Mobile-menu---------------- */
+
 
 /* --------- Order-form-----------*/
 /* -------- /Order-form-----------*/
@@ -573,7 +580,6 @@ body {
    max-width: 208px;
 }
 
-
 .social__title,
 .subscribe__description {
    font-weight: 500;
@@ -585,6 +591,9 @@ body {
    column-gap: 16px;
 }
 
+.footer .social-media__link:hover {
+   background-color: #31d0aa;
+}
 /* --------------- Subscribe-form----------- */
 
 .subscribe-form__input {
@@ -629,28 +638,238 @@ body {
 }
 
 /* --------------- Subscribe-form----------- */
+/* ----------------- /FOOTER---------------- */
 
-/* --------------- /FOOTER-------------- */
+
+/* ----------------- BACKDROP -------------*/
+.backdrop {
+   position: fixed;
+   top: 0;
+   left: 0;
+   z-index: 999;
+
+   width: 100%;
+   height: 100%;
+
+   background: rgba(46, 47, 66, 0.4);
+   opacity: 0; 
+   visibility: hidden;
+
+   pointer-events: none;
+   transition: opacity 250ms cubic-bezier(0.4, 0, 0.2, 1), visibility 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.backdrop.is-open {
+   opacity: 1; 
+   visibility: visible;
+   pointer-events: auto;
+}
+/* ------------------- /BACKDROP -------------*/
+
+/*----------------- MODAL WINDOW -------------*/
+.modal-window {
+   position: absolute;
+   top: 50%;
+   left: 50%;
+   transform: translate(-50%, -50%);
+   width: 288px;
+   min-height: 623px;
+
+   padding-left: 16px;
+   padding-right: 16px;
+   padding-bottom: 24px;
+   padding-top: 72px;
+   border-radius: 4px;
+   background-color: #fcfcfc;
+   box-shadow: 0 1px 1px 0 rgba(0, 0, 0, 0.14), 0 1px 3px 0 rgba(0, 0, 0, 0.12), 0 2px 1px 0 rgba(0, 0, 0, 0.2);
+   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window__btn-close {
+   position: absolute;
+   top: 24px;
+   right: 24px;
+
+   width: 24px;
+   height: 24px;
+   border-radius: 50%;
+   border: 1px solid rgba(0, 0, 0, 0.1);
+   background-color: #e7e9fc;
+   cursor: pointer;
+   padding: 0;
+   fill: #2e2f42;
+   transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1), background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   display: flex;
+   justify-content: center;
+   align-items: center;
+}
+
+
+.modal-window__btn-close:hover,
+.modal-window__btn-close:focus {
+   background-color: #404bbf;
+   border: none;
+   fill: #ffffff;
+}
+
+.modal-window__img-close {
+   fill: #2e2f42;
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.modal-window__btn-close:hover>.modal-window__img-close,
+.modal-window__btn-close:focus>.modal-window__img-close {
+   fill: #ffffff;
+}
+
+.modal-window__text {
+   font-weight: 500;
+   text-align: center;
+   color: #2e2f42;
+
+   max-width: 256px;
+   margin-left: auto;
+   margin-right: auto;
+   margin-bottom: 16px;
+}
+/*----------------- MODAL WINDOW -------------*/
+
+
+/* ----------------- FORM-ORDER -------------*/
+.form__item_input {
+   margin-bottom: 8px;
+}
+
+.form__label {
+   font-size: 12px;
+   line-height: 1.17;
+   letter-spacing: 0.04em;
+   color: #8e8f99;
+
+   display: block;
+   width: 100%;
+   margin-bottom: 4px;
+}
+
+.form__input-container {
+   position: relative;
+}
+
+.form__input {
+   height: 40px;
+   width: 100%;
+
+   padding-left: 38px;
+   border: 1px solid rgba(46, 47, 66, 0.4);
+   border-radius: 4px;
+   background-color: transparent;
+   outline: transparent;
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__input:focus {
+   border-color: #4d5ae5;
+}
+
+.form__icon {
+   fill: #2e2f42;
+   position: absolute;
+   top: 50%;
+   left: 16px;
+   transform: translateY(-50%);
+   transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__input:focus+.form__icon {
+   fill: #4d5ae5;
+}
+
+.form__item_textarea {
+   margin-bottom: 16px;
+}
+
+.form__textarea {
+   color: rgba(46, 47, 66, 0.4);
+   font-size: 12px;
+   line-height: 1.17;
+   letter-spacing: 0.04em;
+   outline: transparent;
+   padding: 8px 16px;
+   border: 1px solid rgba(46, 47, 66, 0.4);
+   border-radius: 4px;
+   background-color: transparent;
+   resize: none;
+   transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+
+   width: 100%;
+   height: 120px;
+}
+
+.form__textarea:focus {
+   border-color: #4d5ae5;
+}
+
+.form__textarea::placeholder {
+   color: rgba(46, 47, 66, 0.4);
+}
+
+.form__item_checkbox {
+   margin-bottom: 24px;
+}
+
+.form__checkbox:checked+.form__label-checkbox .custom-checkbox {
+   background-color: #404bbf;
+   border: none;
+   fill: #f4f4fd;
+}
+
+.form__label-checkbox {
+   font-size: 12px;
+   line-height: 1.17;
+   letter-spacing: 0.04em;
+   color: #8e8f99;
+}
+
+.custom-checkbox {
+   width: 16px;
+   height: 16px;
+   margin-right: 8px;
+
+   display: inline-flex;
+   justify-content: center;
+   align-items: center;
+
+   border-radius: 2px;
+   border: 1px solid rgba(46, 47, 66, 0.4);
+   fill: transparent;
+   cursor: pointer;
+   transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.form__checkbox {
+   border-radius: 2px;
+   border: 1px solid rgba(46, 47, 66, 0.4);
+}
+
+.policy-link {
+   line-height: 1.33;
+   text-transform: capitalize;
+   text-decoration: underline;
+   color: #4d5ae5;
+}
+
+
+.form__checkbox:focus+.form__label-checkbox .custom-checkbox {
+   outline: 2px solid black;
+}
+
+.contact-form__button {
+   width: 169px;
+}
+/* ----------------- /FORM-ORDER -------------*/
+
 /* ================== /MOBILE STYLES ========================*/
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
@@ -848,6 +1067,18 @@ body {
       width: 264px;
    }
    /* -------------- /FOOTER---------------- */
+
+   /*----------------- MODAL WINDOW -------------*/
+      .modal-window {
+         min-width: 408px;
+         /* min-height: 623px; */
+   
+         padding-left: 24px;
+         padding-right: 24px;
+         padding-bottom: 24px;
+         padding-top: 72px;
+      }
+   /*----------------- /MODAL WINDOW -------------*/
 }
 
 /* ================== /TABLET STYLES ========================*/
@@ -956,8 +1187,7 @@ body {
    /* -------------- FOOTER---------------- */
    .footer__container {
       justify-content: space-between;
+   }
    /* -------------- /FOOTER---------------- */
-
 }
-
 /* ================== /DESKTOP STYLES ========================*/
