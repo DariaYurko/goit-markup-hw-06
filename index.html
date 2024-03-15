@@ -25,9 +25,9 @@
 
   <!--------------------------------- HEDER --------------------------------------->
   <header class="header">
-    <div class="container header-container">
+    <div class="container header__container">
       <nav class="nav">
-        <a class="logo" href="./index.html">Web<span class="header__logo_color">Studio</span></a>
+        <a class="logo" href="./index.html">Web<span class="logo_dark">Studio</span></a>
         <ul class="menu header__menu">
           <li class="menu__item">
             <a class="menu__link active" href="./index.html">Studio</a>
@@ -41,8 +41,8 @@
         </ul>
       </nav>
 
-      <button class="button-menu" type="button">
-        <svg class="button-menu__icon" width="24" height="24">
+      <button class="menu-button" type="button">
+        <svg class="menu-button__icon" width="24" height="24">
           <use href="./images/icons.svg#icon-burger"></use>
         </svg>
       </button>
@@ -67,7 +67,7 @@
     <!------------------------------- HERO --------------------------------------->
     <section class="hero">
       <div class="container hero__container">
-        <h1 class="title">Effective Solutions for Your Business</h1>
+        <h1 class="title hero__title">Effective Solutions for Your Business</h1>
         <button class="hero__button button" type="button">Order Service</button>
       </div>
     </section>
@@ -79,7 +79,7 @@
     <section class="strategy">
       <div class="strategy__container container">
         <h2 class="visually-hidden">Our strategy</h2>
-        
+
         <ul class="strategy__list">
           <li class="strategy__item">
             <div class="strategy__image">
@@ -146,8 +146,9 @@
 
           <li class="card-team">
             <div class="card-team__thumb">
-              <img class="card-team__avatar" src="./images/team/mobile/mark-guerrero-mobile.jpg" srcset="./images/team/mobile/mark-guerrero-mobile.jpg 1x, ./images/team/mobile/mark-guerrero-mobile@2x.jpg 2x" alt="Photo of Mark Guerrero"
-                width="264" height="260" />
+              <img class="card-team__avatar" src="./images/team/mobile/mark-guerrero-mobile.jpg"
+                srcset="./images/team/mobile/mark-guerrero-mobile.jpg 1x, ./images/team/mobile/mark-guerrero-mobile@2x.jpg 2x"
+                alt="Photo of Mark Guerrero" width="264" height="260" />
             </div>
             <div class="card-team__info">
               <h3 class="card-team__name">Mark Guerrero</h3>
@@ -189,8 +190,9 @@
           <li class="card-team">
             <div class="card-team__thumb">
               <div class="card-team__thumb">
-                <img class="card-team__avatar" src="./images/team/mobile/tom-ford-mobile.jpg" srcset="./images/team/mobile/tom-ford-mobile.jpg 1x, ./images/team/mobile/tom-ford-mobile@2x.jpg 2x" alt="Photo of Tom Ford" width="264"
-                  height="260" />
+                <img class="card-team__avatar" src="./images/team/mobile/tom-ford-mobile.jpg"
+                  srcset="./images/team/mobile/tom-ford-mobile.jpg 1x, ./images/team/mobile/tom-ford-mobile@2x.jpg 2x"
+                  alt="Photo of Tom Ford" width="264" height="260" />
               </div>
             </div>
             <div class="card-team__info">
@@ -232,8 +234,9 @@
 
           <li class="card-team">
             <div class="card-team__thumb">
-              <img class="card-team__avatar" src="./images/team/mobile/camila-garcia-mobile.jpg" srcset="./images/team/mobile/camila-garcia-mobile.jpg 1x, ./images/team/mobile/camila-garcia-mobile@2x.jpg 2x" alt="Photo of Camila Garcia"
-                width="264" height="260" />
+              <img class="card-team__avatar" src="./images/team/mobile/camila-garcia-mobile.jpg"
+                srcset="./images/team/mobile/camila-garcia-mobile.jpg 1x, ./images/team/mobile/camila-garcia-mobile@2x.jpg 2x"
+                alt="Photo of Camila Garcia" width="264" height="260" />
             </div>
             <div class="card-team__info">
               <h3 class="card-team__name">Camila Garcia</h3>
@@ -274,8 +277,9 @@
 
           <li class="card-team">
             <div class="card-team__thumb">
-              <img class="card-team__avatar" src="./images/team/mobile/daniel-wilson-mobile.jpg" srcset="./images/team/mobile/daniel-wilson-mobile.jpg 1x, ./images/team/mobile/daniel-wilson-mobile@2x.jpg 2x" alt="Photo of Daniel Wilson"
-                width="264" height="260" />
+              <img class="card-team__avatar" src="./images/team/mobile/daniel-wilson-mobile.jpg"
+                srcset="./images/team/mobile/daniel-wilson-mobile.jpg 1x, ./images/team/mobile/daniel-wilson-mobile@2x.jpg 2x"
+                alt="Photo of Daniel Wilson" width="264" height="260" />
             </div>
             <div class="card-team__info">
               <h3 class="card-team__name">Daniel Wilson</h3>
@@ -387,8 +391,12 @@
                 <source
                   srcset="./images/portfolio/desktop/meditation-app-desktop.jpg 1x, ./images/portfolio/desktop/meditation-app-desktop@2x.jpg 2x"
                   media="(min-width: 1158px)" />
-                <source srcset="./images/portfolio/tablet/meditation-app-tablet.jpg 1x, ./images/portfolio/tablet/meditation-app-tablet@2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/portfolio/mobile/meditation-app-mobile.jpg 1x, ./images/portfolio/mobile/meditation-app-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                <source
+                  srcset="./images/portfolio/tablet/meditation-app-tablet.jpg 1x, ./images/portfolio/tablet/meditation-app-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/mobile/meditation-app-mobile.jpg 1x, ./images/portfolio/mobile/meditation-app-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)" />
 
                 <img class="card-portfolio__img" src="./images/portfolio/desktop/meditation-app-desktop.jpg"
                   alt="Meditation App" />
@@ -407,11 +415,18 @@
           <li class="portfolio__item card-portfolio">
             <div class="card-portfolio__thumb">
               <picture class="card-portfolio__pic">
-                <source srcset="./images/portfolio/desktop/taxi-service-desktop.jpg 1x, ./images/portfolio/desktop/taxi-service-desktop@2x.jpg 2x" media="(min-width: 1158px)" />
-                <source srcset="./images/portfolio/tablet/taxi-service-tablet.jpg 1x, ./images/portfolio/tablet/taxi-service-tablet@2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/portfolio/mobile/taxi-service-mobile.jpg 1x, ./images/portfolio/mobile/taxi-service-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                <source
+                  srcset="./images/portfolio/desktop/taxi-service-desktop.jpg 1x, ./images/portfolio/desktop/taxi-service-desktop@2x.jpg 2x"
+                  media="(min-width: 1158px)" />
+                <source
+                  srcset="./images/portfolio/tablet/taxi-service-tablet.jpg 1x, ./images/portfolio/tablet/taxi-service-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/mobile/taxi-service-mobile.jpg 1x, ./images/portfolio/mobile/taxi-service-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)" />
 
-                <img class="card-portfolio__img" src="./images/portfolio/mobile/taxi-service-mobile.jpg" alt="Taxi Service" />
+                <img class="card-portfolio__img" src="./images/portfolio/mobile/taxi-service-mobile.jpg"
+                  alt="Taxi Service" />
               </picture>
               <p class="overlay">
                 14 Stylish and User-Friendly App Design Concepts · Task
@@ -427,11 +442,18 @@
           <li class="portfolio__item card-portfolio">
             <div class="card-portfolio__thumb">
               <picture class="card-portfolio__pic">
-                <source srcset="./images/portfolio/desktop/screen-illustrations-desktop.jpg 1x, ./images/portfolio/desktop/screen-illustrations-desktop@2x.jpg 2x" media="(min-width: 1158px)" />
-                <source srcset="./images/portfolio/tablet/screen-illustrations-tablet.jpg 1x, ./images/portfolio/tablet/screen-illustrations-tablet@2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/portfolio/mobile/screen-illustrations-mobile.jpg 1x, ./images/portfolio/mobile/screen-illustrations-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                <source
+                  srcset="./images/portfolio/desktop/screen-illustrations-desktop.jpg 1x, ./images/portfolio/desktop/screen-illustrations-desktop@2x.jpg 2x"
+                  media="(min-width: 1158px)" />
+                <source
+                  srcset="./images/portfolio/tablet/screen-illustrations-tablet.jpg 1x, ./images/portfolio/tablet/screen-illustrations-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/mobile/screen-illustrations-mobile.jpg 1x, ./images/portfolio/mobile/screen-illustrations-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)" />
 
-                <img class="card-portfolio__img" src="./images/portfolio/mobile/screen-illustrations-mobile.jpg" alt="Screen Illustrations" />
+                <img class="card-portfolio__img" src="./images/portfolio/mobile/screen-illustrations-mobile.jpg"
+                  alt="Screen Illustrations" />
               </picture>
               <p class="overlay">
                 14 Stylish and User-Friendly App Design Concepts · Task
@@ -447,9 +469,15 @@
           <li class="portfolio__item card-portfolio">
             <div class="card-portfolio__thumb">
               <picture class="card-portfolio__pic">
-                <source srcset="./images/portfolio/desktop/online-courses-desktop.jpg 1x, ./images/portfolio/desktop/online-courses-desktop@2x.jpg 2x" media="(min-width: 1158px)" />
-                <source srcset="./images/portfolio/tablet/online-courses-tablet.jpg 1x, ./images/portfolio/tablet/online-courses-tablet@2x.jpg 2x" media="(min-width: 768px)" />
-                <source srcset="./images/portfolio/mobile/online-courses-mobile.jpg 1x, ./images/portfolio/mobile/online-courses-mobile@2x.jpg 2x" media="(max-width: 767px)" />
+                <source
+                  srcset="./images/portfolio/desktop/online-courses-desktop.jpg 1x, ./images/portfolio/desktop/online-courses-desktop@2x.jpg 2x"
+                  media="(min-width: 1158px)" />
+                <source
+                  srcset="./images/portfolio/tablet/online-courses-tablet.jpg 1x, ./images/portfolio/tablet/online-courses-tablet@2x.jpg 2x"
+                  media="(min-width: 768px)" />
+                <source
+                  srcset="./images/portfolio/mobile/online-courses-mobile.jpg 1x, ./images/portfolio/mobile/online-courses-mobile@2x.jpg 2x"
+                  media="(max-width: 767px)" />
 
                 <img class="card-portfolio__img" src="./images/portfolio/mobile/" alt="Online Courses" />
               </picture>
@@ -475,7 +503,7 @@
   <footer class="footer">
     <div class="footer__container container">
       <div class="footer__content">
-        <a class="logo footer__logo" href="./index.html">Web<span class="footer__logo_color">Studio</span></a>
+        <a class="logo footer__logo" href="./index.html">Web<span class="logo_white">Studio</span></a>
         <p class="footer__text">
           Increase the flow of customers and sales for your business with
           digital marketing & growth solutions.
@@ -484,7 +512,7 @@
 
       <div class="social footer__social">
         <p class="social__title">Social media</p>
-        <ul class="social-media">
+        <ul class="social__list social-media">
           <li class="social-media__item">
             <a href="" class="social-media__link">
               <svg class="social-media__icon" width="24" height="24">
@@ -546,7 +574,7 @@
           <use href="./images/icons.svg#icon-closemark"></use>
         </svg>
       </button>
-      
+
       <nav class="mobile-menu__nav">
         <ul class="mobile-menu__menu">
           <li class="mobile-menu__item">
@@ -622,54 +650,57 @@
 
       <p class="modal-window__text">Leave your contacts and we will call you back</p>
 
-      <form class="order-form" name="order-form" autocomplete="off">
-        <div class="form__item form__item_input">
-          <label class="form__label" for="user-name">Name</label>
-          <div class="form__input-container">
-            <input class="form__input" type="text" id="user-name" name="user-name" pattern="a-zA-Zа-яА-ЯіІїЇєЄ"
-              title="Daria" required />
-            <svg class="form__icon" width="18" height="24">
+      <form class="contact-form" name="contact-form" autocomplete="off">
+
+        <div class="contact-form__input-field">
+          <label class="contact-form__label label-contact-form" for="user-name">Name</label>
+          <div class="contact-form__container">
+            <input class="contact-form__input input-contact-form" type="text" id="user-name" name="user-name"
+              pattern="a-zA-Zа-яА-ЯіІїЇєЄ" title="Daria" required />
+            <svg class="contact-form__icon" width="18" height="24">
               <use href="./images/icons.svg#icon-person"></use>
             </svg>
           </div>
         </div>
 
-        <div class="form__item form__item_input">
-          <label class="form__label" for="user-phone">Phone</label>
-          <div class="form__input-container">
-            <input type="tel" class="form__input" name="user-phone" id="user-phone" required />
-            <svg class="form__icon" width="18" height="24">
+        <div class="contact-form__input-field">
+          <label class="contact-form__label label-contact-form" for="user-phone">Phone</label>
+          <div class="contact-form__container">
+            <input class="contact-form__input input-contact-form" type="tel" name="user-phone" id="user-phone"
+              required />
+            <svg class="contact-form__icon" width="18" height="24">
               <use href="./images/icons.svg#icon-phone"></use>
             </svg>
           </div>
         </div>
 
-        <div class="form__item form__item_input">
-          <label class="form__label" for="user-mail">Email</label>
-          <div class="form__input-container">
-            <input type="email" class="form__input" name="user-mail" id="user-mail" required />
-            <svg class="form__icon" width="18" height="24">
+        <div class="contact-form__input-field">
+          <label class="contact-form__label label-contact-form" for="user-mail">Email</label>
+          <div class="contact-form__container">
+            <input class="contact-form__input input-contact-form" type="email" name="user-mail" id="user-mail"
+              required />
+            <svg class="contact-form__icon" width="18" height="24">
               <use href="./images/icons.svg#icon-mail"></use>
             </svg>
           </div>
         </div>
 
-        <div class="form__item form__item_textarea">
-          <label class="form__label" for="user-comment">Comment</label>
-          <textarea class="form__textarea" id="user-comment" name="user-comment" placeholder="Text input"></textarea>
+        <div class="contact-form__textarea-field">
+          <label class="contact-form__label label-contact-form" for="user-comment">Comment</label>
+          <textarea class="contact-form__textarea textarea-contact-form" id="user-comment" name="user-comment" placeholder="Text input"></textarea>
         </div>
 
-        <div class="form__item form__item_checkbox">
-          <input class="form__checkbox visually-hidden" id="user-privacy" type="checkbox" name="user-privacy"
+        <div class="contact-form__checkbox-field">
+          <input class="real-checkbox visually-hidden" id="user-privacy" type="checkbox" name="user-privacy"
             value="true" required />
-          <label class="form__label-checkbox" for="user-privacy">
-            <span class="custom-checkbox">
+          <label class="label-policy" for="user-privacy">
+            <span class="label-policy__box custom-checkbox">
               <svg class="custom-checkbox__icon" width="10" height="8">
                 <use href="./images/icons.svg#icon-checkmark"></use>
               </svg>
             </span>
-            <span class="policy-text">I accept the terms and conditions of the
-              <a href="#" class="policy-link">Privacy Policy</a>
+            <span class="label-policy__text">I accept the terms and conditions of the
+              <a href="#" class="label-policy__link">Privacy Policy</a>
             </span>
           </label>
         </div>
@@ -681,4 +712,5 @@
   <!----------------------------- /MODAL-WINDOW --------------------------------------->
 
 </body>
+
 </html>

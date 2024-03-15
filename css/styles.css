@@ -74,6 +74,9 @@ body {
 }
 
 .button {
+   display: block;
+   padding: 16px 32px;
+
    font-weight: 500;
    line-height: 1.5;
    letter-spacing: 0.04em;
@@ -82,12 +85,15 @@ body {
    box-shadow: 0 4px 4px 0 rgba(0, 0, 0, 0.15);
    border-radius: 4px;
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
 
-   display: block;
-   padding: 16px 32px;
+.hero__button, 
+.contact-form__button {
+   width: 169px;
    margin-left: auto;
    margin-right: auto;
 }
+
 
 .button:hover,
 .button:active {
@@ -161,13 +167,13 @@ body {
    padding-right: 16px;
 }
 
-/* ------- Header ----- */
+/* ------------------------- Header ------------------- */
 .header {
    padding-top: 16px;
    padding-bottom: 16px;
 }
 
-.header-container {
+.header__container {
    display: flex;
    justify-content: space-between;
    align-items: center;
@@ -191,12 +197,12 @@ body {
    display: block;
 }
 
-.header__logo_color {
+.logo_dark {
    color: #2e2f42;
 }
 
 
-.button-menu {
+.menu-button {
    fill: #2f2f37;
 }
 
@@ -207,7 +213,7 @@ body {
    position: fixed;
    top: 0;
    left: 0;
-   z-index: 1000;
+   z-index: 999;
    width: 100%;
    height: 100%;
    overflow: auto;
@@ -308,12 +314,14 @@ body {
 }
 
 .address__link_blue {
-   color: #4d5ae5;;
+   color: #4d5ae5;
+   ;
 }
 
 .mobile-menu .social-media {
    column-gap: 40px;
 }
+
 /* ----------------- /Mobile-menu---------------- */
 
 
@@ -372,9 +380,12 @@ body {
    text-transform: capitalize;
    text-align: center;
    color: #ffffff;
+}
 
+.hero__title {
    max-width: 216px;
-   margin: 0 auto;
+   margin-right: auto;
+   margin-left: auto;
    margin-bottom: 72px;
 }
 
@@ -382,6 +393,7 @@ body {
    margin-left: auto;
    margin-right: auto;
 }
+
 /* ---------- /HERO --------------- */
 
 
@@ -563,11 +575,10 @@ body {
 
 .footer__logo {
    display: inline-block;
-
    margin-bottom: 16px;
 }
 
-.footer__logo_color {
+.logo_bright {
    color: #f4f4fd;
 }
 
@@ -576,7 +587,7 @@ body {
    color: #f4f4fd;
 }
 
-.social {
+.footer__social {
    max-width: 208px;
 }
 
@@ -587,7 +598,7 @@ body {
    margin-bottom: 16px;
 }
 
-.footer .social-media {
+.social__list {
    column-gap: 16px;
 }
 
@@ -638,7 +649,7 @@ body {
    column-gap: 16px;
 }
 
-/* --------------- Subscribe-form----------- */
+/* -------------- Subscribe-form----------- */
 /* ----------------- /FOOTER---------------- */
 
 
@@ -653,7 +664,7 @@ body {
    height: 100%;
 
    background: rgba(46, 47, 66, 0.4);
-   opacity: 0; 
+   opacity: 0;
    visibility: hidden;
 
    pointer-events: none;
@@ -661,11 +672,14 @@ body {
 }
 
 .backdrop.is-open {
-   opacity: 1; 
+   opacity: 1;
    visibility: visible;
    pointer-events: auto;
 }
+
 /* ------------------- /BACKDROP -------------*/
+
+
 
 /*----------------- MODAL WINDOW -------------*/
 .modal-window {
@@ -734,33 +748,38 @@ body {
    margin-right: auto;
    margin-bottom: 16px;
 }
+
 /*----------------- MODAL WINDOW -------------*/
 
 
 /* ----------------- FORM-ORDER -------------*/
-.form__item_input {
+.contact-form__input-field {
    margin-bottom: 8px;
 }
 
-.form__label {
-   font-size: 12px;
-   line-height: 1.17;
-   letter-spacing: 0.04em;
-   color: #8e8f99;
-
-   display: block;
+.contact-form__label {
    width: 100%;
    margin-bottom: 4px;
 }
 
-.form__input-container {
+.contact-form__container {
    position: relative;
 }
 
-.form__input {
+.contact-form__input {
    height: 40px;
    width: 100%;
+}
 
+.label-contact-form {
+   font-size: 12px;
+   line-height: 1.17;
+   letter-spacing: 0.04em;
+   color: #8e8f99;
+   display: block;
+}
+
+.input-contact-form {
    padding-left: 38px;
    border: 1px solid rgba(46, 47, 66, 0.4);
    border-radius: 4px;
@@ -769,28 +788,33 @@ body {
    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input:focus {
+.input-contact-form:focus {
    border-color: #4d5ae5;
 }
 
-.form__icon {
-   fill: #2e2f42;
+.contact-form__icon {
    position: absolute;
    top: 50%;
    left: 16px;
+   fill: #2e2f42;
    transform: translateY(-50%);
    transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__input:focus+.form__icon {
+.input-contact-form:focus+.contact-form__icon {
    fill: #4d5ae5;
 }
 
-.form__item_textarea {
+.contact-form__textarea-field {
    margin-bottom: 16px;
 }
 
-.form__textarea {
+.contact-form__textarea {
+   width: 100%;
+   height: 120px;
+}
+
+.textarea-contact-form {
    color: rgba(46, 47, 66, 0.4);
    font-size: 12px;
    line-height: 1.17;
@@ -802,30 +826,28 @@ body {
    background-color: transparent;
    resize: none;
    transition: border-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
-
-   width: 100%;
-   height: 120px;
 }
 
-.form__textarea:focus {
+.textarea-contact-form:focus {
    border-color: #4d5ae5;
 }
 
-.form__textarea::placeholder {
+.textarea-contact-form::placeholder {
    color: rgba(46, 47, 66, 0.4);
 }
 
-.form__item_checkbox {
+
+.contact-form__checkbox-field {
    margin-bottom: 24px;
 }
 
-.form__checkbox:checked+.form__label-checkbox .custom-checkbox {
+.real-checkbox:checked+.label-policy .custom-checkbox {
    background-color: #404bbf;
    border: none;
    fill: #f4f4fd;
 }
 
-.form__label-checkbox {
+.label-policy {
    font-size: 12px;
    line-height: 1.17;
    letter-spacing: 0.04em;
@@ -836,12 +858,13 @@ body {
    column-gap: 8px;
 }
 
-.custom-checkbox {
+.label-policy__box {
    width: 16px;
    height: 16px;
-   /* margin-right: 8px; */
    flex-shrink: 0;
+}
 
+.custom-checkbox {
    display: inline-flex;
    justify-content: center;
    align-items: center;
@@ -853,13 +876,13 @@ body {
    transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1), border 250ms cubic-bezier(0.4, 0, 0.2, 1), fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.form__checkbox {
+.real-checkbox {
    border-radius: 2px;
    border: 1px solid rgba(46, 47, 66, 0.4);
 }
 
 
-.policy-link {
+.label-policy__link {
    line-height: 1.33;
    text-transform: capitalize;
    text-decoration: underline;
@@ -867,13 +890,16 @@ body {
 }
 
 
-.form__checkbox:focus+.form__label-checkbox .custom-checkbox {
+.real-checkbox:focus+.label-policy .custom-checkbox {
    outline: 2px solid black;
 }
 
-.contact-form__button {
+/* .contact-form__button {
    width: 169px;
-}
+   margin-left: auto;
+   margin-right: auto;
+} */
+
 /* ----------------- /FORM-ORDER -------------*/
 
 /* ================== /MOBILE STYLES ========================*/
@@ -894,7 +920,7 @@ body {
       max-width: 768px;
    }
 
-   .button-menu {
+   .menu-button {
       display: none;
    }
 
@@ -987,6 +1013,9 @@ body {
    .title {
       font-size: 56px;
       line-height: 1.07;
+   }
+
+   .hero__title {
       max-width: 496px;
       margin-bottom: 36px;
    }
@@ -1052,7 +1081,7 @@ body {
 
 
 
-      
+
    /* -------------- FOOTER---------------- */
    .footer__container {
       flex-direction: row;
@@ -1067,25 +1096,27 @@ body {
    }
 
    .subscribe-form {
-   display: flex;
-   column-gap: 24px;
+      display: flex;
+      column-gap: 24px;
    }
 
    .subscribe-form__input {
       width: 264px;
    }
+
    /* -------------- /FOOTER---------------- */
 
    /*----------------- MODAL WINDOW -------------*/
-      .modal-window {
-         min-width: 408px;
-         /* min-height: 623px; */
-   
-         padding-left: 24px;
-         padding-right: 24px;
-         padding-bottom: 24px;
-         padding-top: 72px;
-      }
+   .modal-window {
+      min-width: 408px;
+      /* min-height: 623px; */
+
+      padding-left: 24px;
+      padding-right: 24px;
+      padding-bottom: 24px;
+      padding-top: 72px;
+   }
+
    /*----------------- /MODAL WINDOW -------------*/
 }
 
@@ -1129,12 +1160,12 @@ body {
 
    /* -------------- HERO --------------- */
    .hero {
-      max-width: 1440px;
       padding-top: 188px;
       padding-bottom: 188px;
    }
 
-   .title {
+   .hero__title {
+      max-width: 1440px;
       margin-bottom: 48px;
    }
 
@@ -1211,6 +1242,8 @@ body {
    .footer__container {
       justify-content: space-between;
    }
+
    /* -------------- /FOOTER---------------- */
 }
+
 /* ================== /DESKTOP STYLES ========================*/
