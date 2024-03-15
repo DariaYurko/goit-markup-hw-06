@@ -22,7 +22,8 @@
 </head>
 
 <body>
-  <!------------- HEDER --------------------------------------->
+
+  <!--------------------------------- HEDER --------------------------------------->
   <header class="header">
     <div class="container header-container">
       <nav class="nav">
@@ -58,21 +59,23 @@
       </address>
     </div>
   </header>
-  <!------------- /HEDER --------------------------------------->
+  <!-------------------------------- /HEDER --------------------------------------->
+
 
 
   <main class="main">
-    <!-------------------------------- HERO --------------------------------------->
+    <!------------------------------- HERO --------------------------------------->
     <section class="hero">
       <div class="container hero__container">
         <h1 class="title">Effective Solutions for Your Business</h1>
         <button class="hero__button button" type="button">Order Service</button>
       </div>
     </section>
-    <!-------------------------------- /HERO --------------------------------------->
+    <!------------------------------ /HERO --------------------------------------->
 
 
-    <!-------------------------------- STRATEGY ------------------------------------>
+
+    <!------------------------------ STRATEGY ------------------------------------>
     <section class="strategy">
       <div class="strategy__container container">
         <h2 class="visually-hidden">Our strategy</h2>
@@ -131,10 +134,11 @@
         </ul>
       </div>
     </section>
-    <!------------------------------ /STRATEGY ----------------------------------->
+    <!----------------------------- /STRATEGY ----------------------------------->
 
 
-    <!------------------------------ OUR TEAM ------------------------------------>
+
+    <!----------------------------- OUR TEAM ------------------------------------>
     <section class="team">
       <div class="container team__container">
         <h2 class="section-title">Our team</h2>
@@ -312,7 +316,8 @@
         </ul>
       </div>
     </section>
-    <!------------------------------/OUR TEAM ------------------------------------>
+    <!-----------------------------/OUR TEAM ------------------------------------>
+
 
 
     <!----------------------------- OUR PORTFOLIO -------------------------------->
@@ -403,7 +408,7 @@
             <div class="card-portfolio__thumb">
               <picture class="card-portfolio__pic">
                 <source srcset="./images/portfolio/desktop/taxi-service-desktop.jpg 1x, ./images/portfolio/desktop/taxi-service-desktop@2x.jpg 2x" media="(min-width: 1158px)" />
-                <source srcset="/images/portfolio/tablet/taxi-service-tablet.jpg 1x, ./images/portfolio/tablet/taxi-service-tablet@2x.jpg 2x" media="(min-width: 768px)" />
+                <source srcset="./images/portfolio/tablet/taxi-service-tablet.jpg 1x, ./images/portfolio/tablet/taxi-service-tablet@2x.jpg 2x" media="(min-width: 768px)" />
                 <source srcset="./images/portfolio/mobile/taxi-service-mobile.jpg 1x, ./images/portfolio/mobile/taxi-service-mobile@2x.jpg 2x" media="(max-width: 767px)" />
 
                 <img class="card-portfolio__img" src="./images/portfolio/mobile/taxi-service-mobile.jpg" alt="Taxi Service" />
@@ -464,6 +469,7 @@
     </section>
     <!---------------------------- /OUR PORTFOLIO -------------------------------->
   </main>
+
 
   <!-- ---------------------------- FOOTER ------------------------------------------>
   <footer class="footer">
@@ -532,7 +538,7 @@
 
 
 
-  <!-- ----------------------------- MOBILE MENU ---------------------------------->
+  <!-- --------------------------- MOBILE MENU ---------------------------------->
   <div class="mobile-menu">
     <div class="mobile-menu__container container">
       <button class="mobile-menu-btn" type="button">
@@ -540,27 +546,29 @@
           <use href="./images/icons.svg#icon-closemark"></use>
         </svg>
       </button>
-
-      <ul class="mobile-menu__nav">
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link active" href="./index.html">Studio</a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="">Portfolio</a>
-        </li>
-        <li class="mobile-menu__item">
-          <a class="mobile-menu__link" href="">Contacts</a>
-        </li>
-      </ul>
+      
+      <nav class="mobile-menu__nav">
+        <ul class="mobile-menu__menu">
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link active" href="./index.html">Studio</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="">Portfolio</a>
+          </li>
+          <li class="mobile-menu__item">
+            <a class="mobile-menu__link" href="">Contacts</a>
+          </li>
+        </ul>
+      </nav>
 
       <div class="contacts">
         <address class="address">
           <ul class="address__list">
             <li class="address__item">
-              <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
+              <a class="address__link address__link_blue" href="tel:+110001111111">+11 (000) 111-11-11</a>
             </li>
             <li class="address__item">
-              <a class="address__link" href="tel:+110001111111">+11 (000) 111-11-11</a>
+              <a class="address__link" href="mailto:info@devstudio.com">info@devstudio.com</a>
             </li>
           </ul>
         </address>
@@ -599,11 +607,11 @@
 
     </div>
   </div>
-  <!-- ---------------------------- /MOBILE MENU ---------------------------------->
+  <!-- -------------------------- /MOBILE MENU ---------------------------------->
 
 
 
-  <!------------------------------- MODAL-WINDOW --------------------------------------->
+  <!------------------------------ MODAL-WINDOW --------------------------------------->
   <div class="backdrop">
     <div class="modal-window">
       <button class="modal-window__btn-close" type="button">
@@ -625,6 +633,7 @@
             </svg>
           </div>
         </div>
+
         <div class="form__item form__item_input">
           <label class="form__label" for="user-phone">Phone</label>
           <div class="form__input-container">
@@ -634,6 +643,7 @@
             </svg>
           </div>
         </div>
+
         <div class="form__item form__item_input">
           <label class="form__label" for="user-mail">Email</label>
           <div class="form__input-container">
@@ -643,10 +653,12 @@
             </svg>
           </div>
         </div>
+
         <div class="form__item form__item_textarea">
           <label class="form__label" for="user-comment">Comment</label>
           <textarea class="form__textarea" id="user-comment" name="user-comment" placeholder="Text input"></textarea>
         </div>
+
         <div class="form__item form__item_checkbox">
           <input class="form__checkbox visually-hidden" id="user-privacy" type="checkbox" name="user-privacy"
             value="true" required />
@@ -656,15 +668,17 @@
                 <use href="./images/icons.svg#icon-checkmark"></use>
               </svg>
             </span>
-            I accept the terms and conditions of the 
-            <a href="#" class="policy-link">Privacy Policy</a>
+            <span class="policy-text">I accept the terms and conditions of the
+              <a href="#" class="policy-link">Privacy Policy</a>
+            </span>
           </label>
         </div>
+
         <button class="contact-form__button button" type="submit">Send</button>
       </form>
     </div>
   </div>
-  <!------------------------------ /MODAL-WINDOW --------------------------------------->
+  <!----------------------------- /MODAL-WINDOW --------------------------------------->
 
 </body>
 </html>
